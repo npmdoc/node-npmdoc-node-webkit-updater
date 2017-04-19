@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/edjafarov/node-webkit-updater"
-
-    >node-webkit-updater (v0.3.3)</a>
+    <a href="https://github.com/edjafarov/node-webkit-updater">node-webkit-updater (v0.3.3)</a>
 </h1>
 <h4>node-webkit autoupdate library</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.node-webkit-updater">module node-webkit-updater</a><ol>
 
@@ -192,7 +185,7 @@
     <li>description and source-code<pre class="apidocCodePre">function updater(manifest, options){
   this.manifest = manifest;
   this.options = {
-    temporaryDirectory: options &#x26;&#x26; options.temporaryDirectory || os.tmpdir()
+    temporaryDirectory: options &amp;&amp; options.temporaryDirectory || os.tmpdir()
   };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -210,7 +203,7 @@
     <li>description and source-code<pre class="apidocCodePre">function updater(manifest, options){
   this.manifest = manifest;
   this.options = {
-    temporaryDirectory: options &#x26;&#x26; options.temporaryDirectory || os.tmpdir()
+    temporaryDirectory: options &amp;&amp; options.temporaryDirectory || os.tmpdir()
   };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -235,7 +228,7 @@
     <li>description and source-code<pre class="apidocCodePre">function updater(manifest, options){
   this.manifest = manifest;
   this.options = {
-    temporaryDirectory: options &#x26;&#x26; options.temporaryDirectory || os.tmpdir()
+    temporaryDirectory: options &amp;&amp; options.temporaryDirectory || os.tmpdir()
   };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -266,7 +259,7 @@
       return cb(err);
     }
 
-    if(req.statusCode &#x3c; 200 || req.statusCode &#x3e; 299){
+    if(req.statusCode &lt; 200 || req.statusCode &gt; 299){
       return cb(new Error(req.statusCode));
     }
 
@@ -286,14 +279,14 @@
 - manifest `object` - See the [manifest schema](#manifest-schema) below.
 - options `object` - Optional
 
-&#x3c;a name=&#x22;updater#checkNewVersion&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#checkNewVersion"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">checkNewVersion</span>(cb)
 Will check the latest available version of the application by requesting the manifest specified in `manifestUrl`.
 
-The callback will always be called; the second parameter indicates whether or not there&#x27;s a newer version.
+The callback will always be called; the second parameter indicates whether or not there's a newer version.
 This function assumes you use [Semantic Versioning](http://semver.org) and enforces it; if your local version is `0.2.0` and the
- remote one is `0.1.23456` then the callback will be called with `false` as the second paramter. If on the off chance you don&#x27
-;t use semantic versioning, you could manually download the remote manifest and call `download` if you&#x27;re happy that the remote
+ remote one is `0.1.23456` then the callback will be called with `false` as the second paramter. If on the off chance you don'
+;t use semantic versioning, you could manually download the remote manifest and call `download` if you're happy that the remote
  version is newer.
 
 **Params**
@@ -316,14 +309,14 @@ This function assumes you use [Semantic Versioning](http://semver.org) and enfor
       if(err){
           cb(err);
       }
-      if(response &#x26;&#x26; (response.statusCode &#x3c; 200 || response.statusCode &#x3e;= 300)){
+      if(response &amp;&amp; (response.statusCode &lt; 200 || response.statusCode &gt;= 300)){
           pkg.abort();
           return cb(new Error(response.statusCode));
       }
   });
-  pkg.on(&#x27;response&#x27;, function(response){
-    if(response &#x26;&#x26; response.headers &#x26;&#x26; response.headers[&#x27;content-length&#x27;]){
-        pkg[&#x27;content-length&#x27;] = response.headers[&#x27;content-length&#x27;];
+  pkg.on('response', function(response){
+    if(response &amp;&amp; response.headers &amp;&amp; response.headers['content-length']){
+        pkg['content-length'] = response.headers['content-length'];
       }
   });
   var filename = path.basename(url),
@@ -333,13 +326,13 @@ This function assumes you use [Semantic Versioning](http://semver.org) and enfor
     pkg.pipe(fs.createWriteStream(destinationPath));
     pkg.resume();
   });
-  pkg.on(&#x27;error&#x27;, cb);
-  pkg.on(&#x27;end&#x27;, appDownloaded);
+  pkg.on('error', cb);
+  pkg.on('end', appDownloaded);
   pkg.pause();
 
   function appDownloaded(){
     process.nextTick(function(){
-      if(pkg.response.statusCode &#x3e;= 200 &#x26;&#x26; pkg.response.statusCode &#x3c; 300){
+      if(pkg.response.statusCode &gt;= 200 &amp;&amp; pkg.response.statusCode &lt; 300){
         cb(null, destinationPath);
       }
     });
@@ -348,15 +341,15 @@ This function assumes you use [Semantic Versioning](http://semver.org) and enfor
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 This function assumes you use [Semantic Versioning](http://semver.org) and enforces it; if your local version is `0.2.0` and the
- remote one is `0.1.23456` then the callback will be called with `false` as the second paramter. If on the off chance you don&#x27
-;t use semantic versioning, you could manually download the remote manifest and call `download` if you&#x27;re happy that the remote
+ remote one is `0.1.23456` then the callback will be called with `false` as the second paramter. If on the off chance you don'
+;t use semantic versioning, you could manually download the remote manifest and call `download` if you're happy that the remote
  version is newer.
 
 **Params**
 
 - cb `function` - Callback arguments: error, newerVersionExists (`Boolean`), remoteManifest
 
-&#x3c;a name=&#x22;updater#download&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#download"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">download</span>(cb, newManifest)
 Downloads the new app to a template folder
 
@@ -379,7 +372,7 @@ Downloads the new app to a template folder
     <li>description and source-code<pre class="apidocCodePre">getAppExec = function (){
   var execFolder = this.getAppPath();
   var exec = {
-    mac: &#x27;&#x27;,
+    mac: '',
     win: path.basename(process.execPath),
     linux32: path.basename(process.execPath),
     linux64: path.basename(process.execPath)
@@ -387,19 +380,19 @@ Downloads the new app to a template folder
   return path.join(execFolder, exec[platform]);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-**Returns**: `Request` - Request - stream, the stream contains `manifest` property with new manifest and &#x27;content-length&#x27
+**Returns**: `Request` - Request - stream, the stream contains `manifest` property with new manifest and 'content-length'
 ; property with the size of package.
-&#x3c;a name=&#x22;updater#getAppPath&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#getAppPath"&gt;&lt;/a&gt;
 ####updater.getAppPath()
 Returns executed application path
 
 **Returns**: `string`
-&#x3c;a name=&#x22;updater#getAppExec&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#getAppExec"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">getAppExec</span>()
 Returns current application executable
 
 **Returns**: `string`
-&#x3c;a name=&#x22;updater#unpack&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#unpack"&gt;&lt;/a&gt;
 ####updater.unpack(filename, cb, manifest)
 Will unpack the `filename` in temporary folder.
 For Windows, [unzip](https://www.mkssoftware.com/docs/man1/unzip.1.asp) is used (which is [not signed](https://github.com/edjafarov
@@ -418,7 +411,7 @@ For Windows, [unzip](https://www.mkssoftware.com/docs/man1/unzip.1.asp) is used 
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getAppPath = function (){
   var appPath = {
-    mac: path.join(process.cwd(),&#x27;../../..&#x27;),
+    mac: path.join(process.cwd(),'../../..'),
     win: path.dirname(process.execPath)
   };
   appPath.linux32 = appPath.win;
@@ -431,14 +424,14 @@ For Windows, [unzip](https://www.mkssoftware.com/docs/man1/unzip.1.asp) is used 
 - cb `function` - called when download completes. Callback arguments: error, downloaded filepath
 - newManifest `Object` - see [manifest schema](#manifest-schema) below
 
-**Returns**: `Request` - Request - stream, the stream contains `manifest` property with new manifest and &#x27;content-length&#x27
+**Returns**: `Request` - Request - stream, the stream contains `manifest` property with new manifest and 'content-length'
 ; property with the size of package.
-&#x3c;a name=&#x22;updater#getAppPath&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#getAppPath"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">getAppPath</span>()
 Returns executed application path
 
 **Returns**: `string`
-&#x3c;a name=&#x22;updater#getAppExec&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#getAppExec"&gt;&lt;/a&gt;
 ####updater.getAppExec()
 Returns current application executable
 ...</pre></li>
@@ -463,7 +456,7 @@ Returns current application executable
 - options `object` - Optional
 
 **Returns**: `function`
-&#x3c;a name=&#x22;updater#install&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#install"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">install</span>(copyPath, cb)
 Installs the app (copies current application to `copyPath`)
 
@@ -485,7 +478,7 @@ Installs the app (copies current application to `copyPath`)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">run = function (execPath, args, options){
   var arg = arguments;
-  if(platform.indexOf(&#x27;linux&#x27;) === 0) arg[0] = path.dirname(arg[0]);
+  if(platform.indexOf('linux') === 0) arg[0] = path.dirname(arg[0]);
   pRun[platform].apply(this, arg);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -495,7 +488,7 @@ Installs the app (copies current application to `copyPath`)
 - copyPath `string`
 - cb `function` - Callback arguments: error
 
-&#x3c;a name=&#x22;updater#run&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#run"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">run</span>(execPath, args, options)
 Runs the app from original app executable path.
 
@@ -526,7 +519,7 @@ Runs the app from original app executable path.
 - cb `function` - Callback arguments: error, unpacked directory
 - manifest `object`
 
-&#x3c;a name=&#x22;updater#runInstaller&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#runInstaller"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">runInstaller</span>(appPath, args, options)
 Runs installer
 
@@ -552,12 +545,12 @@ Runs installer
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 **Returns**: `string`
-&#x3c;a name=&#x22;updater#getAppExec&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#getAppExec"&gt;&lt;/a&gt;
 ####updater.getAppExec()
 Returns current application executable
 
 **Returns**: `string`
-&#x3c;a name=&#x22;updater#unpack&#x22;&#x3e;&#x3c;/a&#x3e;
+&lt;a name="updater#unpack"&gt;&lt;/a&gt;
 ####updater.<span class="apidocCodeKeywordSpan">unpack</span>(filename, cb, manifest)
 Will unpack the `filename` in temporary folder.
 For Windows, [unzip](https://www.mkssoftware.com/docs/man1/unzip.1.asp) is used (which is [not signed](https://github.com/edjafarov
@@ -579,3 +572,4 @@ For Windows, [unzip](https://www.mkssoftware.com/docs/man1/unzip.1.asp) is used 
     ]
 </div>
 </div>
+</body></html>

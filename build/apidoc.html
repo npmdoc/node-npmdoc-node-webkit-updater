@@ -61,12 +61,515 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.node-webkit-updater">module node-webkit-updater</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.node-webkit-updater">
+            function <span class="apidocSignatureSpan"></span>node-webkit-updater
+            <span class="apidocSignatureSpan">(manifest, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater">
+            function <span class="apidocSignatureSpan">node-webkit-updater.</span>updater
+            <span class="apidocSignatureSpan">(manifest, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-webkit-updater.</span>updater.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-webkit-updater.updater">module node-webkit-updater.updater</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.updater">
+            function <span class="apidocSignatureSpan">node-webkit-updater.</span>updater
+            <span class="apidocSignatureSpan">(manifest, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-webkit-updater.updater.prototype">module node-webkit-updater.updater.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.checkNewVersion">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>checkNewVersion
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.download">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>download
+            <span class="apidocSignatureSpan">(cb, newManifest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.getAppExec">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>getAppExec
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.getAppPath">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>getAppPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.install">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>install
+            <span class="apidocSignatureSpan">(copyPath, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.run">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>run
+            <span class="apidocSignatureSpan">(execPath, args, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.runInstaller">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>runInstaller
+            <span class="apidocSignatureSpan">(appPath, args, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webkit-updater.updater.prototype.unpack">
+            function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>unpack
+            <span class="apidocSignatureSpan">(filename, cb, manifest)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.node-webkit-updater" id="apidoc.module.node-webkit-updater">module node-webkit-updater</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.node-webkit-updater" id="apidoc.element.node-webkit-updater.node-webkit-updater">
+        function <span class="apidocSignatureSpan"></span>node-webkit-updater
+        <span class="apidocSignatureSpan">(manifest, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updater(manifest, options){
+  this.manifest = manifest;
+  this.options = {
+    temporaryDirectory: options &#x26;&#x26; options.temporaryDirectory || os.tmpdir()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater" id="apidoc.element.node-webkit-updater.updater">
+        function <span class="apidocSignatureSpan">node-webkit-updater.</span>updater
+        <span class="apidocSignatureSpan">(manifest, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updater(manifest, options){
+  this.manifest = manifest;
+  this.options = {
+    temporaryDirectory: options &#x26;&#x26; options.temporaryDirectory || os.tmpdir()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-webkit-updater.updater" id="apidoc.module.node-webkit-updater.updater">module node-webkit-updater.updater</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.updater" id="apidoc.element.node-webkit-updater.updater.updater">
+        function <span class="apidocSignatureSpan">node-webkit-updater.</span>updater
+        <span class="apidocSignatureSpan">(manifest, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updater(manifest, options){
+  this.manifest = manifest;
+  this.options = {
+    temporaryDirectory: options &#x26;&#x26; options.temporaryDirectory || os.tmpdir()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-webkit-updater.updater.prototype" id="apidoc.module.node-webkit-updater.updater.prototype">module node-webkit-updater.updater.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.checkNewVersion" id="apidoc.element.node-webkit-updater.updater.prototype.checkNewVersion">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>checkNewVersion
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkNewVersion = function (cb){
+  request.get(this.manifest.manifestUrl, gotManifest.bind(this)); //get manifest from url
+
+<span class="apidocCodeCommentSpan">  /**
+   * @private
+   */
+</span>  function gotManifest(err, req, data){
+    if(err) {
+      return cb(err);
+    }
+
+    if(req.statusCode &#x3c; 200 || req.statusCode &#x3e; 299){
+      return cb(new Error(req.statusCode));
+    }
+
+    try{
+      data = JSON.parse(data);
+    } catch(e){
+      return cb(e)
+    }
+
+    cb(null, semver.gt(data.version, this.manifest.version), data);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**Params**
+
+- manifest `object` - See the [manifest schema](#manifest-schema) below.
+- options `object` - Optional
+
+&#x3c;a name=&#x22;updater#checkNewVersion&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">checkNewVersion</span>(cb)
+Will check the latest available version of the application by requesting the manifest specified in `manifestUrl`.
+
+The callback will always be called; the second parameter indicates whether or not there&#x27;s a newer version.
+This function assumes you use [Semantic Versioning](http://semver.org) and enforces it; if your local version is `0.2.0` and the
+ remote one is `0.1.23456` then the callback will be called with `false` as the second paramter. If on the off chance you don&#x27
+;t use semantic versioning, you could manually download the remote manifest and call `download` if you&#x27;re happy that the remote
+ version is newer.
+
+**Params**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.download" id="apidoc.element.node-webkit-updater.updater.prototype.download">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>download
+        <span class="apidocSignatureSpan">(cb, newManifest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">download = function (cb, newManifest){
+  var manifest = newManifest || this.manifest;
+  var url = manifest.packages[platform].url;
+  var pkg = request(url, function(err, response){
+      if(err){
+          cb(err);
+      }
+      if(response &#x26;&#x26; (response.statusCode &#x3c; 200 || response.statusCode &#x3e;= 300)){
+          pkg.abort();
+          return cb(new Error(response.statusCode));
+      }
+  });
+  pkg.on(&#x27;response&#x27;, function(response){
+    if(response &#x26;&#x26; response.headers &#x26;&#x26; response.headers[&#x27;content-length&#x27;]){
+        pkg[&#x27;content-length&#x27;] = response.headers[&#x27;content-length&#x27;];
+      }
+  });
+  var filename = path.basename(url),
+      destinationPath = path.join(this.options.temporaryDirectory, filename);
+  // download the package to template folder
+  fs.unlink(path.join(this.options.temporaryDirectory, filename), function(){
+    pkg.pipe(fs.createWriteStream(destinationPath));
+    pkg.resume();
+  });
+  pkg.on(&#x27;error&#x27;, cb);
+  pkg.on(&#x27;end&#x27;, appDownloaded);
+  pkg.pause();
+
+  function appDownloaded(){
+    process.nextTick(function(){
+      if(pkg.response.statusCode &#x3e;= 200 &#x26;&#x26; pkg.response.statusCode &#x3c; 300){
+        cb(null, destinationPath);
+      }
+    });
+  }
+  return pkg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+This function assumes you use [Semantic Versioning](http://semver.org) and enforces it; if your local version is `0.2.0` and the
+ remote one is `0.1.23456` then the callback will be called with `false` as the second paramter. If on the off chance you don&#x27
+;t use semantic versioning, you could manually download the remote manifest and call `download` if you&#x27;re happy that the remote
+ version is newer.
+
+**Params**
+
+- cb `function` - Callback arguments: error, newerVersionExists (`Boolean`), remoteManifest
+
+&#x3c;a name=&#x22;updater#download&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">download</span>(cb, newManifest)
+Downloads the new app to a template folder
+
+**Params**
+
+- cb `function` - called when download completes. Callback arguments: error, downloaded filepath
+- newManifest `Object` - see [manifest schema](#manifest-schema) below
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.getAppExec" id="apidoc.element.node-webkit-updater.updater.prototype.getAppExec">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>getAppExec
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAppExec = function (){
+  var execFolder = this.getAppPath();
+  var exec = {
+    mac: &#x27;&#x27;,
+    win: path.basename(process.execPath),
+    linux32: path.basename(process.execPath),
+    linux64: path.basename(process.execPath)
+  };
+  return path.join(execFolder, exec[platform]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+**Returns**: `Request` - Request - stream, the stream contains `manifest` property with new manifest and &#x27;content-length&#x27
+; property with the size of package.
+&#x3c;a name=&#x22;updater#getAppPath&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.getAppPath()
+Returns executed application path
+
+**Returns**: `string`
+&#x3c;a name=&#x22;updater#getAppExec&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">getAppExec</span>()
+Returns current application executable
+
+**Returns**: `string`
+&#x3c;a name=&#x22;updater#unpack&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.unpack(filename, cb, manifest)
+Will unpack the `filename` in temporary folder.
+For Windows, [unzip](https://www.mkssoftware.com/docs/man1/unzip.1.asp) is used (which is [not signed](https://github.com/edjafarov
+/node-webkit-updater/issues/68)).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.getAppPath" id="apidoc.element.node-webkit-updater.updater.prototype.getAppPath">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>getAppPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAppPath = function (){
+  var appPath = {
+    mac: path.join(process.cwd(),&#x27;../../..&#x27;),
+    win: path.dirname(process.execPath)
+  };
+  appPath.linux32 = appPath.win;
+  appPath.linux64 = appPath.win;
+  return appPath[platform];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+**Params**
+
+- cb `function` - called when download completes. Callback arguments: error, downloaded filepath
+- newManifest `Object` - see [manifest schema](#manifest-schema) below
+
+**Returns**: `Request` - Request - stream, the stream contains `manifest` property with new manifest and &#x27;content-length&#x27
+; property with the size of package.
+&#x3c;a name=&#x22;updater#getAppPath&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">getAppPath</span>()
+Returns executed application path
+
+**Returns**: `string`
+&#x3c;a name=&#x22;updater#getAppExec&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.getAppExec()
+Returns current application executable
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.install" id="apidoc.element.node-webkit-updater.updater.prototype.install">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>install
+        <span class="apidocSignatureSpan">(copyPath, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (copyPath, cb){
+  pInstall[platform].apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+- appPath `string`
+- args `array` - Arguments which will be passed when running the new app
+- options `object` - Optional
+
+**Returns**: `function`
+&#x3c;a name=&#x22;updater#install&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">install</span>(copyPath, cb)
+Installs the app (copies current application to `copyPath`)
+
+**Params**
+
+- copyPath `string`
+- cb `function` - Callback arguments: error
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.run" id="apidoc.element.node-webkit-updater.updater.prototype.run">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>run
+        <span class="apidocSignatureSpan">(execPath, args, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (execPath, args, options){
+  var arg = arguments;
+  if(platform.indexOf(&#x27;linux&#x27;) === 0) arg[0] = path.dirname(arg[0]);
+  pRun[platform].apply(this, arg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**Params**
+
+- copyPath `string`
+- cb `function` - Callback arguments: error
+
+&#x3c;a name=&#x22;updater#run&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">run</span>(execPath, args, options)
+Runs the app from original app executable path.
+
+**Params**
+
+- execPath `string`
+- args `array` - Arguments passed to the app being ran.
+- options `object` - Optional. See `spawn` from nodejs docs.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.runInstaller" id="apidoc.element.node-webkit-updater.updater.prototype.runInstaller">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>runInstaller
+        <span class="apidocSignatureSpan">(appPath, args, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runInstaller = function (appPath, args, options){
+  return pRun[platform].apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+**Params**
+
+- filename `string`
+- cb `function` - Callback arguments: error, unpacked directory
+- manifest `object`
+
+&#x3c;a name=&#x22;updater#runInstaller&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">runInstaller</span>(appPath, args, options)
+Runs installer
+
+**Params**
+
+- appPath `string`
+- args `array` - Arguments which will be passed when running the new app
+- options `object` - Optional
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webkit-updater.updater.prototype.unpack" id="apidoc.element.node-webkit-updater.updater.prototype.unpack">
+        function <span class="apidocSignatureSpan">node-webkit-updater.updater.prototype.</span>unpack
+        <span class="apidocSignatureSpan">(filename, cb, manifest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unpack = function (filename, cb, manifest){
+  pUnpack[platform](filename, cb, manifest, this.options.temporaryDirectory);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+**Returns**: `string`
+&#x3c;a name=&#x22;updater#getAppExec&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.getAppExec()
+Returns current application executable
+
+**Returns**: `string`
+&#x3c;a name=&#x22;updater#unpack&#x22;&#x3e;&#x3c;/a&#x3e;
+####updater.<span class="apidocCodeKeywordSpan">unpack</span>(filename, cb, manifest)
+Will unpack the `filename` in temporary folder.
+For Windows, [unzip](https://www.mkssoftware.com/docs/man1/unzip.1.asp) is used (which is [not signed](https://github.com/edjafarov
+/node-webkit-updater/issues/68)).
+
+**Params**
+
+- filename `string`
+- cb `function` - Callback arguments: error, unpacked directory
+...</pre></li>
+    </ul>
+
 
 </div>
 
