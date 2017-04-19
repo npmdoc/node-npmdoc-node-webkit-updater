@@ -1,9 +1,14 @@
-# api documentation for  [node-webkit-updater (v0.3.3)](https://github.com/edjafarov/node-webkit-updater)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-webkit-updater.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-webkit-updater) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-webkit-updater.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-webkit-updater)
+# npmdoc-node-webkit-updater
+
+#### api documentation for  [node-webkit-updater (v0.3.3)](https://github.com/edjafarov/node-webkit-updater)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-webkit-updater.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-webkit-updater) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-webkit-updater.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-webkit-updater)
+
 #### node-webkit autoupdate library
 
-[![NPM](https://nodei.co/npm/node-webkit-updater.png?downloads=true)](https://www.npmjs.com/package/node-webkit-updater)
+[![NPM](https://nodei.co/npm/node-webkit-updater.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-webkit-updater)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-node-webkit-updater/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-node-webkit-updater_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-node-webkit-updater/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-node-webkit-updater/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-node-webkit-updater/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-node-webkit-updater/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-node-webkit-updater/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-node-webkit-updater/build/screenCapture.npmPackageListing.svg)
 
@@ -17,20 +22,17 @@
 
 {
     "author": {
-        "name": "Eldar Djafarov",
-        "email": "djkojb@gmail.com"
+        "name": "Eldar Djafarov"
     },
     "bugs": {
         "url": "https://github.com/edjafarov/node-webkit-updater/issues"
     },
     "contributors": [
         {
-            "name": "Eldar Djafarov",
-            "email": "djkojb@gmail.com"
+            "name": "Eldar Djafarov"
         },
         {
-            "name": "Adam Lynch",
-            "email": "contact@adamlynch.com"
+            "name": "Adam Lynch"
         }
     ],
     "dependencies": {
@@ -70,17 +72,14 @@
     "main": "./app/updater.js",
     "maintainers": [
         {
-            "name": "edjafarov",
-            "email": "djkojb@gmail.com"
+            "name": "edjafarov"
         },
         {
-            "name": "adam-lynch",
-            "email": "contact@adamlynch.ie"
+            "name": "adam-lynch"
         }
     ],
     "name": "node-webkit-updater",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/edjafarov/node-webkit-updater.git"
@@ -92,16 +91,6 @@
     "version": "0.3.3"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module node-webkit-updater](#apidoc.module.node-webkit-updater)
-
-
-
-# <a name="apidoc.module.node-webkit-updater"></a>[module node-webkit-updater](#apidoc.module.node-webkit-updater)
 
 
 
